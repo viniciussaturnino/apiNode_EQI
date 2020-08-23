@@ -1,7 +1,10 @@
 import { Router } from 'express';
 
+import AdvisorController from './app/controllers/AdvisorController';
+
 const routes = new Router();
 
-routes.get('/', (req, res) => res.json({ message: 'Hello World' }));
+routes.post('/advisors', AdvisorController.store);
+routes.get('/advisors', AdvisorController.index);
 
 export default routes;
