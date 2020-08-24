@@ -25,6 +25,12 @@ export default {
       .select('email')
       .first();
 
+    if (!advisor_id) {
+      return res
+        .status(400)
+        .json({ error: 'Operation not permited. You need to be an advisor!' });
+    }
+
     if (clientExists) {
       return res.status(400).json({ error: 'Client already exists.' });
     }
