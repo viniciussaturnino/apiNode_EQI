@@ -6,10 +6,11 @@ export default {
 
     const clients = await connection('clients')
       .where('advisor_id', advisor_id)
-      .select('*');
+      .select('*')
+      .first();
 
     if (!clients) {
-      return res.status(400).json({ error: 'Clients not found.' });
+      return res.status(400).json({ error: "You don't have any clients yet." });
     }
 
     return res.json(clients);
