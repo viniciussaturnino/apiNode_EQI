@@ -2,9 +2,17 @@ import connection from '../../database/connection';
 
 export default {
   async index(req, res) {
-    const advisors = await connection('advisors').select('*');
+    const advisor_id = req.headers.authorization;
 
-    return res.json(advisors);
+    const clients = await connection('clients')
+      .where('advisor_id', advisor_id)
+      .select('*');
+
+    if (!clients) {
+      return res.status(400).json({ error: 'Clients not found.' });
+    }
+
+    return res.json(clients);
   },
 
   async store(req, res) {
