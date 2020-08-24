@@ -20,6 +20,16 @@ export default {
     const { name, cpf, email } = req.body;
     const advisor_id = req.headers.authorization;
 
+    if (cpf.length !== 11) {
+      return res.status(400).json({ error: 'CPF must be size of 11 digits.' });
+    }
+
+    if (name.length < 2 || name.length > 200) {
+      return res.status(400).json({
+        error: 'Name must be min size of 2 caracters and max of 200.',
+      });
+    }
+
     const clientExists = await connection('clients')
       .where('email', email)
       .select('email')
