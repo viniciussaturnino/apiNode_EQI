@@ -3,9 +3,17 @@ import connection from '../../database/connection';
 export default {
   async index(req, res) {
     const { id } = req.params;
+    const advisor_id = req.headers.authorization;
+
+    if (!advisor_id) {
+      return res
+        .status(400)
+        .json({ error: 'You need to be an advisor to search clients' });
+    }
 
     const client = await connection('clients')
       .where('id', id)
+      .andWhere('advisor_id', advisor_id)
       .select('*')
       .first();
 
