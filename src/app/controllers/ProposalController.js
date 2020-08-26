@@ -15,11 +15,6 @@ export default {
     const { value, paymentMethod, fund_id, client_id } = req.body;
     const advisor_id = req.headers.authorization;
 
-    const advisor = await connection('advisors')
-      .where('id', advisor_id)
-      .select('id')
-      .first();
-
     const client = await connection('clients')
       .where('id', client_id)
       .select('id')
@@ -30,7 +25,7 @@ export default {
       .select('id')
       .first();
 
-    if (!advisor) {
+    if (!advisor_id) {
       return res.status(400).json({
         error: 'You need to be an advisor to register a new proposal',
       });
@@ -52,7 +47,7 @@ export default {
       return res.status(400).json({ error: 'Invalid payment method.' });
     }
 
-    await connection('proposal').insert({
+    const code = await connection('proposal').insert({
       value,
       paymentMethod,
       fund_id,
@@ -60,6 +55,7 @@ export default {
     });
 
     return res.json({
+      code,
       value,
       paymentMethod,
       fund_id,
