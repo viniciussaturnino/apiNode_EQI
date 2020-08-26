@@ -1,5 +1,6 @@
-/* eslint-disable prefer-const */
+/* eslint-disable no-restricted-properties */
 /* eslint-disable no-plusplus */
+/* eslint-disable prefer-const */
 import { format } from 'date-fns';
 import connection from '../../database/connection';
 
@@ -72,23 +73,30 @@ export default {
 
     const proposal = await connection('proposal')
       .where('code', proposta)
-      .select(['code', 'value'])
+      .select(['code', 'value', 'fund_id'])
       .first();
+
+    let juros = await connection('funds')
+      .where('id', proposal.fund_id)
+      .select('rendimentoAnual')
+      .first();
+
+    juros = (juros.rendimentoAnual /= 12) / 100;
 
     if (!proposal) {
       return res.status(400).json({ error: 'Proposal not found' });
     }
 
     const arr = [];
-    let valor = 0;
     let data;
     mes = Number(mes);
 
     for (let i = 0; i < meses; i++) {
+      let valor = proposal.value;
+      valor *= Math.pow(1 + juros, i + 1);
+
       data = format(new Date(ano, String(mes), dia), 'yyyy-MM-dd');
       mes++;
-
-      valor++;
 
       arr.push({
         data,

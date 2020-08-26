@@ -4,7 +4,7 @@ exports.up = function (knex) {
     table.increments('id').primary();
     table.string('cnpj', 14).notNullable();
     table.string('nome').notNullable();
-    table.integer('rendimentoAnual').notNullable();
+    table.decimal('rendimentoAnual').notNullable();
   });
 };
 
