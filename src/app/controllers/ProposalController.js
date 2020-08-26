@@ -69,7 +69,12 @@ export default {
 
   async getProfit(req, res) {
     const { dataInicial, proposta, meses } = req.body;
+    const advisor_id = req.headers.authorization;
     let [ano, mes, dia] = dataInicial.split('-');
+
+    if (!advisor_id) {
+      return res.status(400).json({ error: 'You need to be an advisor.' });
+    }
 
     const proposal = await connection('proposal')
       .where('code', proposta)
