@@ -1,3 +1,6 @@
+/* eslint-disable prefer-const */
+/* eslint-disable no-plusplus */
+import { format } from 'date-fns';
 import connection from '../../database/connection';
 
 export default {
@@ -61,5 +64,39 @@ export default {
       fund_id,
       client_id,
     });
+  },
+
+  async getProfit(req, res) {
+    const { dataInicial, proposta, meses } = req.body;
+    let [ano, mes, dia] = dataInicial.split('-');
+
+    const proposal = await connection('proposal')
+      .where('code', proposta)
+      .select(['code', 'value'])
+      .first();
+
+    if (!proposal) {
+      return res.status(400).json({ error: 'Proposal not found' });
+    }
+
+    const arr = [];
+    let valor = 0;
+    let data;
+    mes = Number(mes);
+
+    for (let i = 0; i < meses; i++) {
+      data = format(new Date(ano, String(mes), dia), 'yyyy-MM-dd');
+      mes++;
+
+      valor++;
+
+      arr.push({
+        data,
+        proposta,
+        valor,
+      });
+    }
+
+    return res.json(arr);
   },
 };

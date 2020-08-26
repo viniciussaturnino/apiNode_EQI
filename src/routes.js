@@ -15,4 +15,6 @@ routes.get('/clients/:id', ClientController.index);
 routes.post('/proposal', ProposalController.store);
 routes.get('/proposal', ProposalController.index);
 
+routes.post('/profit', ProposalController.getProfit);
+
 export default routes;
