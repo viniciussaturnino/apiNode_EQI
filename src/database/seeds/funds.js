@@ -1,10 +1,9 @@
 /* eslint-disable func-names */
 exports.seed = function (knex) {
-  // Deletes ALL existing entries
   return knex('funds')
     .del()
     .then(function () {
-      // Inserts seed entries
+      // Insersão dos fundos disponíveis fornecidos
       return knex('funds').insert([
         {
           id: 1,

@@ -1,6 +1,5 @@
-// eslint-disable-next-line func-names
+/* eslint-disable func-names */
 exports.up = function (knex) {
-  // eslint-disable-next-line func-names
   return knex.schema.createTable('clients', function (table) {
     table.increments('id').primary();
     table.string('name').notNullable();
@@ -12,7 +11,6 @@ exports.up = function (knex) {
   });
 };
 
-// eslint-disable-next-line func-names
 exports.down = function (knex) {
   return knex.schema.dropTable('clients');
 };
