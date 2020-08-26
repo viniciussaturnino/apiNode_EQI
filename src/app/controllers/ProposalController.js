@@ -119,7 +119,7 @@ export default {
 
     for (let i = 0; i < meses; i++) {
       let valor = proposal.value;
-      valor *= Math.pow(1 + juros, i + 1);
+      valor *= (1 + juros) ** (i + 1);
 
       data = format(new Date(ano, String(mes), dia), 'yyyy-MM-dd');
       mes++;
