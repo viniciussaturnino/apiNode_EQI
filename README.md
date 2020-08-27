@@ -3,7 +3,7 @@
 <h2 align="center">Status da API</h1>
 <h4 align="center">
 	🚧 API Backend 🚀 Finalizada...✅
-</h4><br>
+</h4>
 
 <h1 align="center">
   <img src="https://img.shields.io/static/v1?label=yarn&message=1.22.4&color=7159c1&style=for-the-badge&logo=ghost"/>
@@ -23,8 +23,6 @@
 <p align="center">
 A Eu Quero Investir oferece assessoria a seus clientes, desde a montagem da carteira de investimentos, até o acompanhamento da rentabilidade. Para isso disponibiliza para seus assessores um sistema para auxiliar e acompanhar seus clientes. Para essa tarefa você deve criar uma API simplificada que recebe requests para criação de clientes, propostas e para consultar a projeção de rendimentos. Você não deve se preocupar com o frontend da aplicação.
 </p>
-
-<br>
 
 # Features
 
@@ -118,7 +116,7 @@ id do fundo usado: 1
     <img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/49040839?s=460&u=75aad58ecd77e5b83e7a207149219b05d6597145&v=4" width="150px;" alt=""/>
     <br />
     <sub><b>Vinicius Saturnino</b></sub></a> <a href="https://github.com/viniciussaturnino" title="Github">🚀
-  </a><br>
+  </a>
 
   Desenvolvido por Vinicius Saturnino
 
