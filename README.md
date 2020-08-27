@@ -1,10 +1,69 @@
-# EQI Back-End
+<h1 align="center">EQI Back-End</h1>
 
-## Api em Node JS
+<h2 align="center">Status da API</h1>
+<h4 align="center">
+	🚧 API Backend 🚀 Finalizada...✅
+</h4><br>
 
+<h1 align="center">
+  <img src="https://img.shields.io/static/v1?label=yarn&message=1.22.4&color=7159c1&style=for-the-badge&logo=ghost"/>
+  <img src="https://img.shields.io/static/v1?label=node&message=12.18.3&color=%3CCOLOR%3E&style=for-the-badge&logo=ghost"/>
+</h1>
+
+<p align="center">
+ <a href="#Objetivo">Objetivo</a> •
+ <a href="#Features">Features</a> •
+ <a href="#Tecnologias e ferramentas">Tecnologias</a> •
+ <a href="#Instruções de uso">Instruções</a> •
+ <a href="#Autor">Autor</a>
+</p>
+
+<h1 align="center">Objetivo</h1>
+
+<p align="center">
 A Eu Quero Investir oferece assessoria a seus clientes, desde a montagem da carteira de investimentos, até o acompanhamento da rentabilidade. Para isso disponibiliza para seus assessores um sistema para auxiliar e acompanhar seus clientes. Para essa tarefa você deve criar uma API simplificada que recebe requests para criação de clientes, propostas e para consultar a projeção de rendimentos. Você não deve se preocupar com o frontend da aplicação.
+</p>
 
-## Fundos disponíveis
+<br>
+
+# Features
+
+- [x] Cadastro de assessores.
+- [x] Cadastro de clientes (somente assessores).
+- [x] Cadastro de propostas (somente assessores).
+- [x] Listagem de clientes para determinado assessor.
+- [x] Listagem de clientes específicos pelo seu ID.
+- [x] Listagem de propostas (somente assessores).
+- [x] Projeção de rendimentos calculada com juros compostos (somente assessores).
+
+# Tecnologias e ferramentas
+
+- NodeJS
+- MySQL
+- Express
+- Insomnia
+- DBeaver
+
+# Instruções de uso
+
+### Passo 1:
+```
+$ git clone https://github.com/viniciussaturnino/apiNode_EQI
+```
+### Passo 2:
+```
+$ cd apiNode_EQI
+```
+### Passo 3:
+```
+$ yarn
+```
+### Passo 4:
+```
+$ yarn dev
+```
+
+# Fundos disponíveis
 
 ```json
 {
@@ -21,58 +80,6 @@ A Eu Quero Investir oferece assessoria a seus clientes, desde a montagem da cart
   "rendimentoAnual": 8
 }
 ```
-
-## Atributos de cliente
-
-* nome (texto com no minimo 2 e no máximo 200 caracteres)
-* cpf (somente 11 números, sem pontuações)
-* email (texto com no máximo 200 caracteres)
-* assessor (ID de um assessor criado)
-
-## Atributos do assessor
-
-* nome (texto com no minimo 2 e no máximo 200 caracteres)
-
-## Atributos de proposta
-
-* codigo (número inteiro único que representa o número da proposta criada na seguradora)
-* valor (número de ponto flutuante positivo)
-* tipoPagamento ("boleto" ou "debito")
-* fundo (ID de um dos fundos disponíveis)
-* cliente (ID de um cliente cadastrado)
-
-## User Story Cliente
-
-* Sendo um assessor eu quero cadastrar meus clientes para ter seus dados salvos para futuras operações
-* Sendo um assessor eu quero ter acesso a todos os clientes que eu já cadastrei para usar seus dados em novas operações
-
-### Requisitos para Cliente
-
-* Deve ser criado por 1 assessor
-* Deve pertencer ao assessor que o criou
-* Deve ser encontrado somente pelo assessor que o criou
-* Deve ser encontrado pelo seu ID
-
-## User Story Proposta
-
-* Sendo um assessor eu quero cadastrar propostas de investimentos para meus clientes terem as vantagens do produto
-
-### Requisitos para Proposta
-
-* Deve ser criada por um assessor para um dos seus clientes
-* Deve ter apenas o valor de aporte inicial
-* Deve estar vinculado a um dos fundos disponíveis
-* Deve estar vinculado ao cliente titular
-
-### User Story Rendimentos
-
-* Sendo um assessor eu quero ter acesso a projeção de rendimentos para informar possíveis ganhos aos meus clientes com mais agilidade
-
-### Requisitos para Rendimentos
-
-* Deve ser calculado usando juros compostos
-* Deve ser calculado para uma quantidade variável de meses futuros
-* Deve ser possível saber para qual mês o rendimento calculado pertence
 
 ### Input rendimentos (2 meses)
 
@@ -105,6 +112,16 @@ id do fundo usado: 1
 ]
 ```
 
-## Critérios
+<h1 align="center">Autor</h1>
+<h3 align="center">
+  <a href="https://github.com/viniciussaturnino">
+    <img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/49040839?s=460&u=75aad58ecd77e5b83e7a207149219b05d6597145&v=4" width="150px;" alt=""/>
+    <br />
+    <sub><b>Vinicius Saturnino</b></sub></a> <a href="https://github.com/viniciussaturnino" title="Github">🚀
+  </a><br>
 
-Nós prefiriamos que você use nodejs com mysql, porém pode-se usar qualquer linguagem ou framework contanto que você construa um sistema sólido, resiliente, com foco em qualidade de código, simplicidade e manutenabilidade. Esperamos que você aprenda rápido e tome decisões visando qualidade na entrega. Não é necessário criar interfaces para o usuário, porém esperamos que a implementação seja a mais próxima possível do que seria necessário na vida real, considerando que outro desenvolvedor pegaria esse projeto e tivesse que começar a implementar novas funcionalidades a partir do exato ponto onde você parou.
+  Desenvolvido por Vinicius Saturnino
+
+  [![Linkedin Badge](https://img.shields.io/badge/-Vinicius-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/viniciussaturnino07/)](https://www.linkedin.com/in/viniciussaturnino07/)
+[![Gmail Badge](https://img.shields.io/badge/-viniciussaturnino78@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:viniciussaturnino78@gmail.com)](mailto:viniciussaturnino78@gmail.com)
+</h3>
