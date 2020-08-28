@@ -62,7 +62,11 @@ $ yarn dev
 
 # Fundos disponíveis
 
-```json
+<h1 align="center">
+  <img src="./img/fundos.png" width="500px"/>
+</h1>
+
+<!-- ```json
 {
   "id": 1,
   "cnpj": "80884773000117",
@@ -76,25 +80,35 @@ $ yarn dev
   "nome": "SAO PAULO PREV RF VGBL",
   "rendimentoAnual": 8
 }
-```
+``` -->
 
-### Input rendimentos (2 meses)
+<h2 align="center">Input rendimentos (2 meses)</h2>
 
-valor da proposta: 100
-id do fundo usado: 1
+<h4 align="center">
+  <p>valor da proposta: 100
+id do fundo usado: 1</p>
+</h4>
 
-```json
+<h1 align="center">
+  <img src="./img/input.png" width="400px"/>
+</h1>
+
+<!-- ```json
 {
   "dataInicial": "2020-01-01",
   "proposta": 1,
   "meses": 2
 }
 
-```
+``` -->
 
-### Output rendimentos (2 meses)
+<h2 align="center">Output rendimentos (2 meses)</h2>
 
-```json
+<h1 align="center">
+  <img src="./img/output.png" width="400px"/>
+</h1>
+
+<!-- ```json
 [
   {
     "data": "2020-02-01",
@@ -107,4 +121,4 @@ id do fundo usado: 1
     "valor": 102.01
   }
 ]
-```
+``` -->
