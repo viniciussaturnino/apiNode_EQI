@@ -13,9 +13,8 @@
 <p align="center">
  <a href="#Objetivo">Objetivo</a> •
  <a href="#Features">Features</a> •
- <a href="#Tecnologias e ferramentas">Tecnologias</a> •
- <a href="#Instruções de uso">Instruções</a> •
- <a href="#Autor">Autor</a>
+ <a href="#Tecnologias">Tecnologias</a> •
+ <a href="#Instruções">Instruções</a>
 </p>
 
 <h1 align="center">Objetivo</h1>
@@ -34,7 +33,7 @@ A Eu Quero Investir oferece assessoria a seus clientes, desde a montagem da cart
 - [x] Listagem de propostas (somente assessores).
 - [x] Projeção de rendimentos calculada com juros compostos (somente assessores).
 
-# Tecnologias e ferramentas
+# Tecnologias
 
 - NodeJS
 - MySQL
@@ -42,7 +41,7 @@ A Eu Quero Investir oferece assessoria a seus clientes, desde a montagem da cart
 - Insomnia
 - DBeaver
 
-# Instruções de uso
+# Instruções
 
 ### Passo 1:
 ```
@@ -109,17 +108,3 @@ id do fundo usado: 1
   }
 ]
 ```
-
-<h1 align="center">Autor</h1>
-<h3 align="center">
-  <a href="https://github.com/viniciussaturnino">
-    <img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/49040839?s=460&u=75aad58ecd77e5b83e7a207149219b05d6597145&v=4" width="150px;" alt=""/>
-    <br />
-    <sub><b>Vinicius Saturnino</b></sub></a> <a href="https://github.com/viniciussaturnino" title="Github">🚀
-  </a>
-
-  Desenvolvido por Vinicius Saturnino
-
-  [![Linkedin Badge](https://img.shields.io/badge/-Vinicius-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/viniciussaturnino07/)](https://www.linkedin.com/in/viniciussaturnino07/)
-[![Gmail Badge](https://img.shields.io/badge/-viniciussaturnino78@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:viniciussaturnino78@gmail.com)](mailto:viniciussaturnino78@gmail.com)
-</h3>
