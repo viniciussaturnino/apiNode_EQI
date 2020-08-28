@@ -62,9 +62,7 @@ $ yarn dev
 
 # Fundos disponíveis
 
-<h1 align="center">
-  <img src="./img/fundos.png" width="500px"/>
-</h1>
+<img src="./img/fundos.png" width="500px"/>
 
 <!-- ```json
 {
@@ -82,16 +80,12 @@ $ yarn dev
 }
 ``` -->
 
-<h2 align="center">Input rendimentos (2 meses)</h2>
+<h2 >Input rendimentos (2 meses)</h2>
 
-<h4 align="center">
-  <p>valor da proposta: 100
+<p>valor da proposta: 100
 id do fundo usado: 1</p>
-</h4>
 
-<h1 align="center">
-  <img src="./img/input.png" width="400px"/>
-</h1>
+<img src="./img/input.png" width="400px"/>
 
 <!-- ```json
 {
@@ -102,11 +96,9 @@ id do fundo usado: 1</p>
 
 ``` -->
 
-<h2 align="center">Output rendimentos (2 meses)</h2>
+<h2 >Output rendimentos (2 meses)</h2>
 
-<h1 align="center">
-  <img src="./img/output.png" width="400px"/>
-</h1>
+<img src="./img/output.png" width="400px"/>
 
 <!-- ```json
 [
